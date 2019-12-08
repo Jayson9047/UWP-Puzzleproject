@@ -1,0 +1,126 @@
+﻿<Page
+    x:Class="Puzzle.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Puzzle"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Aqua" x:Name="myGrid"
+      Margin="8,8,0,8">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <RepositionThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+
+        </Grid.RowDefinitions>
+
+
+        <Button x:Name="btn00" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img00" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn01" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img01" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn02" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img02" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn03" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img03" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn10" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img10" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn11" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img11" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn12" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img12" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn13" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img13" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn20" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img20" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn21" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img21" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn22" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img22" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn23" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img23" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn30" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img30" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn31" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img31" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn32" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img32" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="btn33" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="1" Click="btn00_Click">
+            <Image x:Name="img33" Stretch="UniformToFill"></Image>
+        </Button>
+
+        <Image x:Name="image1"  Grid.Row="1" Grid.Column="4" Grid.RowSpan="2"/>
+        <TextBlock x:Name="Error" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Visibility="Collapsed" Text="Please choose a photo first"
+         Foreground="Red"  
+         FontFamily="Century Gothic"
+        FontSize="32"
+        FontStretch="UltraExpanded"
+        FontStyle="Normal" 
+        Padding="5,10,5,10"
+        TextAlignment="Center"
+        />
+        <Button x:Name="win" Content="Win" Grid.Column="3"  Grid.Row="4" VerticalAlignment="Center" Height="58" Width="157" HorizontalAlignment="Center" Click="win_Click"/>
+        <Button x:Name="Choose" Content="Choose Image" Grid.Column="4"  Grid.Row="4" VerticalAlignment="Center" Height="58" Width="157" HorizontalAlignment="Center" Click="Button_Click"/>
+        <Button x:Name="Capture" Content="Capture" Grid.Column="4"  Grid.Row="5" VerticalAlignment="Center" Height="58" Width="157" HorizontalAlignment="Center" Click="captureBtn_Click"/>
+        <TextBlock x:Name="Timer" Grid.Column="0"  Grid.Row="4" TextAlignment="Center"
+         Foreground="Brown"  
+         FontFamily="Century Gothic"
+        FontSize="32"
+        FontStretch="UltraExpanded"
+        FontStyle="Normal" 
+        Padding="5,10,5,10"
+        />
+        <TextBlock x:Name="winner"  Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" Text="You Win!!!" TextWrapping="Wrap" Visibility="Collapsed" VerticalAlignment="Center" Height="68" Width="278"                    
+         Foreground="Navy"   
+         FontFamily="Century Gothic"
+        FontSize="32"
+        FontStretch="UltraExpanded"
+        FontStyle="Normal" 
+        Padding="5,10,5,10"
+        TextAlignment="Center"
+        />
+        <TextBlock x:Name="loser"  Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" Text="You Lose!!!" TextWrapping="Wrap" Visibility="Collapsed" VerticalAlignment="Center" Height="68" Width="278"                    
+         Foreground="Navy"   
+         FontFamily="Century Gothic"
+        FontSize="32"
+        FontStretch="UltraExpanded"
+        FontStyle="Normal" 
+        Padding="5,10,5,10"
+        TextAlignment="Center"
+        />
+    </Grid>
+</Page>
